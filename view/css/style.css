@@ -1,0 +1,27 @@
+header, footer, nav{
+    background-color: rgb(60,60,60);
+    color: white;
+    padding: 1em;
+}
+
+nav a{
+    color: white;
+}
+
+nav a:hover{
+    color: gold;
+}
+
+@media (max-width: 800px){
+  main{
+    width: 100%;
+    margin: 0 10px;
+  }
+}
+
+@media (min-width: 801px){
+  main{
+    width: 800px;
+    margin: 0 auto;
+  }
+}
