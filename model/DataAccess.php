@@ -14,6 +14,26 @@ class DataAccess{
         if($res) return $res->fetchAll();
         return [];
     }
+    //S’ha de canviar l’aparença del Home i a
+    // cada tema se li ha d’afegir un número que indiqui quantes
+    //preguntes hi han a la base de dades sobre el tema.
+  /*  public function getTemasYumPreguntas();
+        $sql = "select * from preguntas;";
+        $res = $this->pdo->query($sql);
+        if($res) return $res->fetchAll();
+        return [];
+    }*/
+    //muestra numero de preguntas diferentes de temas
+    public function getTemasYumPreguntas(){
+        $sql = "SELECT count(pregunta),preguntas.tema
+                from preguntas
+                JOIN temas ON (preguntas.tema=temas.id)
+                GROUP BY tema";
+        $res = $this->pdo->query($sql);
+        if($res) return $res->fetchAll();
+        var_dump($res);
+        return [];
+    }
 
 }
 ?>
