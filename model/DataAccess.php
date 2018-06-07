@@ -14,7 +14,5 @@ class DataAccess{
         if($res) return $res->fetchAll();
         return [];
     }
-
-    
 }
 ?>
