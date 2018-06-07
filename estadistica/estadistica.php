@@ -36,7 +36,7 @@
 			
 			if ($this->url != "")
 			{
-				$resultat =
+				$result =
 					$this->pdo->query (
 						"select count(*) from estadistica where url=\"{$this->url}\";")
 																				->fetchColumn();
@@ -45,7 +45,7 @@
 			return $result;
 		}
 	
-		private function create_visited_count()
+		private function create_visited_url()
 		{
 			if ($this->url != "")
 			{
@@ -54,11 +54,11 @@
 			}
 		}
 		
-		private function update_visited_count()
+		private function update_visited_url()
 		{
 			if ($this->url != "")
 			{
-				$this->squery (
+				$this->pdo->query (
 					"update estadistica set visitas=visitas+1 where url=\"{$this->url}\";");
 			}
 		}

@@ -1,6 +1,6 @@
 <?php
 
-	require_once __DIR__."./estadistica.php";
+	require_once __DIR__."/estadistica.php";
 
 	function middleware_estadistica ($request, $response, $next)
 	{
@@ -16,10 +16,10 @@
 		
 			default:
 			{
-				$db = parse_ini_file("config.ini");
+				$db = parse_ini_file ("config.ini");
 				$estadistica = new Estadistica ($db);
 				
-				$estadistica->new_visited ($path);
+				$estadistica->new_visited ("/{$path}");
 			}
 		}
 	
