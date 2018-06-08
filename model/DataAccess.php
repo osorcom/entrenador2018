@@ -25,7 +25,7 @@ class DataAccess{
     }*/
     //muestra numero de preguntas diferentes de temas
     public function getTemasYumPreguntas(){
-        $sql = "SELECT count(pregunta),preguntas.tema
+        $sql = "SELECT count(pregunta) as numpreguntas,preguntas.tema
                 from preguntas
                 JOIN temas ON (preguntas.tema=temas.id)
                 GROUP BY tema";

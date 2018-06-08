@@ -11,7 +11,7 @@ class HomeController {
    public function __invoke($request, $response, $args) {
      //$data['tema'] = $this->_c->data->getTemas();
      $data['tema'] = $this->_c->data->getTemasYumPreguntas();
-     $response = $this->_c->view->render($response, "home.php", $tema);
+     $response = $this->_c->view->render($response, "home.php", $data);
      return $response;
    }
 }
