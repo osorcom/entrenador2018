@@ -12,11 +12,13 @@
             <h1>HOME</h1>
             <p>Bien venido a la web de <strong>Entrenador2018</strong>. Aquí porás responder prenguntas sobre diferentes sobre diferentes temas.</p>
             <p>Actualmente disponemos de los siguientes temas:</p>
-            <?php print_r($tema); ?>
+          
             <ul>
-              <?php foreach ($tema as $fila) { echo "<li>{$fila['titulo']}</li>"; } ?>
+              <?php foreach ($tema as $fila) { echo "<li>{$fila['titulo']} ({$fila['numpreguntas']})</li>"; } ?>
             </ul>
+
         </main>
         <?php require_once "section/footer.php"; ?>
+
     </body>
 </html>
