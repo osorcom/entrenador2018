@@ -45,7 +45,6 @@
             if($res===FALSE) echo "<li>Creación de la BD: <span class='err' title=\"$err\">ERROR</span></li>";
             else echo "<li>Creación de la BD: <span class='ok'>OK</span></li>";
 
-
             /* Crear la tabla temas */
             $sql = "create table temas(id int auto_increment primary key, titulo varchar(30) not null, titulo_url varchar(30) not null unique);";
             $res = $conexion->exec($sql);
