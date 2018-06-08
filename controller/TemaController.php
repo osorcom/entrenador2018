@@ -10,7 +10,6 @@ class Teamcontroller{
    	public function __invoke($request, $response, $args) {
    		$titulo = $args['titulo'];
    		$info = $this->c->data->getPreguntas($titulo);
-   		
    	}
 
 }
