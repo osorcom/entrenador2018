@@ -42,6 +42,7 @@ $app->add(new Tuupola\Middleware\HttpBasicAuthentication([
 // -------------- URLs ----------------------------
 $app->get("/", \HomeController::class);
 $app->get("/nuevapregunta", \NuevaPreguntaController::class);
+$app->post("/nuevapregunta", \CrearPreguntaController::class);
 
 // -------------- arranca la aplicación ----------------------------
 $app->run();
