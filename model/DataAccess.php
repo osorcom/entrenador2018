@@ -14,5 +14,17 @@ class DataAccess{
         if($res) return $res->fetchAll();
         return [];
     }
+
+    public function getPreguntas($titulo_url){
+        $sql = "SELECT preguntas.pregunta, temas.titulo 
+                FROM preguntas 
+                JOIN temas 
+                ON (preguntas.tema = temas.id) 
+                WHERE temas.titulo_url = '%{$titulo_url}%' 
+                ORDER BY RAND() LIMIT 5";
+        $res = $this->pdo->query($sql);
+        if($res) return $res->fetchAll();
+        return [];
+    }
 }
 ?>
