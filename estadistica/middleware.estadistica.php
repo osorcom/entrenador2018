@@ -19,7 +19,7 @@
 				$db = parse_ini_file ("config.ini");
 				$estadistica = new Estadistica ($db);
 				
-				$estadistica->new_visited ("/{$path}");
+				$estadistica->new_visited ($path);
 			}
 		}
 	
