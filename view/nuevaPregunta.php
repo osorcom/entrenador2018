@@ -15,11 +15,11 @@
 <?php $url = "$BASE_URL"."/nuevapregunta";?>
     <form action="<?php $url?>" method="post">
         <label> Seleccione un tema o introduzca uno nuevo<br/>
-            <input type="text" name="tema" minlength="5" maxlength="30" size="30" list="temas"/>
+            <input type="text" name="titulo" minlength="5" maxlength="30" size="30" list="temas"/>
             <datalist id="temas">
                 <select name="temas">
                     <?php foreach ($tema as $fila) {
-                        echo "<option> {$fila['id']}-{$fila['titulo']} ";
+                        echo "<option>{$fila['titulo']} ";
                     } ?>
                 </select>
             </datalist>
@@ -40,10 +40,23 @@
     </form>
 
     <p>Actualmente disponemos de los siguientes temas:</p>
+
+    <?php
+
+
+                  if(isset($nuevapregunta))//var_dump($nuevapregunta);
+
+      ?>
     <ul>
-        <?php foreach ($tema as $fila) {
+
+        <?php
+        echo "<br>";
+     //  var_dump($tema);
+        foreach ($tema as $fila) {
             echo "<li>{$fila['titulo']}</li>";
-        } ?>
+
+
+       } ?>
     </ul>
 </main>
 

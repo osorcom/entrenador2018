@@ -33,7 +33,7 @@ $app->add(new \Slim\Middleware\SafeURLMiddleware());
 //autenticación básica para las acciones de crear o borrar pregunta.
 //añadir cadenas con URL al path.
 $app->add(new Tuupola\Middleware\HttpBasicAuthentication([
-  "path" => [],
+  "path" => ["/nuevapregunta"],
   "users" => [
     "user" => "user"
   ]

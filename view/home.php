@@ -17,6 +17,7 @@
               <?php foreach ($tema as $fila) { echo "<li>{$fila['titulo']}</li>"; } ?>
             </ul>
         </main>
+
         <?php require_once "section/footer.php"; ?>
     </body>
 </html>
