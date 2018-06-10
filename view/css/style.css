@@ -1,27 +1,124 @@
 header, footer, nav{
-    background-color: rgb(60,60,60);
+    background-color: black;
     color: white;
     padding: 1em;
 }
 
 nav a{
     color: white;
+
+}
+nav {
+    text-decoration: none;
+
+
+}
+nav a:hover{
+    color: black;
+    background: orange;
+    text-decoration: none;
+
 }
 
-nav a:hover{
-    color: gold;
+ul{
+  list-style-type: none;
+
 }
+li a{
+  border: 2px solid white;
+  margin-left: -20px;
+  margin-bottom: 10px;
+  list-style-type: none;
+  padding: 10px;
+}
+
+table, th, td {
+    border: 2px solid black;
+    padding: 5px;
+    color:black;
+}
+table {
+    border-spacing: 5px;
+    border-radius: 5px;
+    margin-bottom: 50px;
+    background-color: orange;
+
+}
+
+body {font-family: "Lato", sans-serif;
+        background-color: black;
+}
+
+main{
+  margin-bottom: 50px;
+  background-color: black;
+  color:black;
+  padding: 5px;
+}
+main h1,p{
+  color:white;
+}
+#center{
+  align-items: center;
+}
+footer{
+  width: 100%;
+  height: -100px;
+  padding: 10px;
+  margin-bottom:-10px;
+  background-color: black;
+}
+
+.tablink {
+    background-color: #555;
+    color: white;
+    float: left;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    padding: 14px 16px;
+    font-size: 17px;
+    width: 25%;
+    text-align: center;
+}
+
+.tablink:hover {
+    background-color: red;
+}
+
+/* Style the tab content */
+.tabcontent {
+    color: white;
+    display: none;
+    padding: 50px;
+    text-align: center;
+}
+#Entrenador2018 img{
+  margin-right: 10
+}
+#Entrenador2018 {
+background-color:black;
+text-align: center;}
+#Carles {background-color:blue}
+#Juan{background-color:#3399ff}
+#DavidS {background-color:#00cc66;}
+#Dostow {background-color:#ff6666;}
+#DavidG {background-color:red;}
+#Carmen {background-color:#ff33cc;}
+#Sonia {background-color:#9966ff;}
+
 
 @media (max-width: 800px){
   main{
+
     width: 100%;
-    margin: 0 10px;
+    margin: auto;
   }
 }
 
 @media (min-width: 801px){
   main{
     width: 800px;
-    margin: 0 auto;
+    margin: auto;
   }
 }

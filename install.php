@@ -76,7 +76,8 @@
             else echo "<li>Creación de la tabla estadistica: <span class='ok'>OK</span></li>";
 
 
-            /* Introducir temas de prueba */
+            /* Introducir temas de prueba    ('Cine', 'cine'),
+                  ('Deportes', 'deportes');";*/
             $sql = "insert into temas(titulo, titulo_url) values
                 ('Matemáticas', 'matematicas'),
                 ('Física', 'fisica');";
