@@ -34,7 +34,7 @@ li a{
 
 table, th, td {
     border: 2px solid black;
-    padding: 5px;
+    padding: 15px;
     color:black;
 }
 table {
@@ -60,6 +60,11 @@ main h1,p{
 }
 #center{
   align-items: center;
+}
+#centrar{
+  margin-top: 110px;
+  padding: 30px;
+  border: 9px solid black;
 }
 footer{
   width: 100%;

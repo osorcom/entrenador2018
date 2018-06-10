@@ -25,7 +25,7 @@
 
             <div class="card-footer text-center">
               <div class="card text-center">
-              <h5 class="card-title" >Bien venido a la web de<strong>Entrenador2018</strong>. Aquí podrás responder preguntas
+              <h5 class="card-title" >Bien venido a la web de<strong> Entrenador2018</strong>. Aquí podrás responder preguntas
                 sobre diferentes temas.</h5>
             </div>
             <br>

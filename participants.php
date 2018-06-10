@@ -104,7 +104,7 @@
 
           <div id="Juan" class="tabcontent">
             <h3>Juan</h3>
-            <p>Tarea número 2</p>
+            <h5>Tasca número 2</h5>
             <p>Test de 5 preguntes.</p> Afegir una nova opció al menú de navegació
               que carregarà una pàgina amb tots els temes disponibles. Quan
                l’usuari seleccioni un tema es carregarà una nova pàgina amb
@@ -114,7 +114,7 @@
 
           <div id="DavidS" class="tabcontent">
             <h3>David</h3>
-            <p>Tarea número 3</p>
+            <h5>Tasca número 3</h5>
             <p> Nova pregunta.</p> Afegir una nova opció al menú de navegació
                que obrirà un formulari on es podrà escriure una nova
                pregunta amb les seves N possibles respostes. Al formulari
@@ -128,7 +128,7 @@
 
           <div id="Dostow" class="tabcontent">
             <h3>Dostow</h3>
-            <p>Tarea número 4</p>
+            <h5>Tasca número 4</h5>
             <p> Eliminar pregunta.</p><p> Afegir una nova opció al menú de navegació que mostrarà un llistat de totes les preguntes i el tema al que pertanyen. La llista es podrà filtrar per tema i/o per paraules contingudes a la pregunta. Totes les preguntes tindran un botó associat que permetrà eliminar la pregunta amb totes les possibles respostes. Per poder
               fer us d’aquesta opció s’ha d’estar autenticat com a usuari.
             </p>
@@ -136,7 +136,7 @@
 
           <div id="DavidG" class="tabcontent">
             <h3>DavidG</h3>
-            <p>Tarea número 5</p>
+            <h5>Tasca número 5</h5>
             <p> Recollir estadística de visites.<p> Implementar un middleware
                encarregat de comptar el nombre de cops que es visita cada
                 pàgina de l’entrenador2018. Cada cop que es visiti una de
@@ -147,7 +147,7 @@
 
           <div id="Carmen" class="tabcontent">
             <h3>Carmen</h3>
-            <p>Tarea número 5</p>
+            <h5>Tasca número 6</h5>
             <p> Mostrar gràfic de visites.<p> Afegir una nova opció al
               menú de navegació que mostrarà un diagrama de barres amb
                les visites que ha obtingut cada pàgina. Per fer-ho pots
@@ -156,14 +156,14 @@
 
           <div id="Sonia" class="tabcontent">
             <h3>Sonia</h3>
-            <p>Tarea números 7 y 8</p>
-            <p>T-7</p><br>
+            <h5>Tasca números 7 y 8</h5><br>
+            <p>T-7</p>
             <p>Pàgina dels participants. <p>Afegir una nova opció
                al menú de navegació que mostrarà una pàgina
                estàtica on es presentarà als desenvolupadors
                 de l’aplicació i la tasca que ha fet cadascú.
-              </p>
-            <p>T-8</p><br>
+              </p><br>
+            <p>T-8</p>
             <p>Reforma del home.</p> S’ha de canviar l’aparença del Home
                i a cada tema se li ha d’afegir un número que indiqui
               quantes preguntes hi han a la base de dades sobre el tema. </p>
