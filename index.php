@@ -41,7 +41,7 @@ $app->add(new Tuupola\Middleware\HttpBasicAuthentication([
 
 // -------------- URLs ----------------------------
 $app->get("/", \HomeController::class);
-$app->get("/tema/{titulo}", \TemaController::class);
+$app->map(['GET','POST'], "/tema/{titulo}", \TemaController::class);
 // -------------- arranca la aplicación ----------------------------
 $app->run();
 ?>
