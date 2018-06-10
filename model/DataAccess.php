@@ -30,7 +30,8 @@ class DataAccess
             } else {
 
               $url=  CrearPreguntaController::eliminar_tildes($titulo);
-                $sqlTema = "insert into temas(titulo,titulo_url)  values('$titulo','$url' )";
+              $strURL =  strtolower ( $url );
+                $sqlTema = "insert into temas(titulo,titulo_url)  values('$titulo','$strURL' )";
                 echo "$sqlTema";
                 $this->pdo->query($sqlTema);
                 $sqlIdTema  ="select id from preguntas order by id desc limit 1";
