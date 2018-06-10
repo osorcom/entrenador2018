@@ -9,12 +9,19 @@
         <?php require_once "section/header.php"; ?>
         <?php require_once "section/nav.php"; ?>
         <main>
-            <h1>HOME</h1>
+            <h1>TEST</h1>
             <p>Preguntas que has de responder:</p>
             <?php
-                foreach ($info as $pregunta) {?>
+                foreach ($info['preguntas'] as $pregunta) {?>
                     <form>
                         <h2><?php echo "{$pregunta['pregunta']}";?></h2>
+                        <?php 
+                            foreach ($info['respuestas'] as $respuesta) {
+                                if (!strcmp($pregunta['id'],$respuesta['pregunta'])){?>
+                                    <input type="radio" name="option" value="<?php echo "{$respuesta['pregunta']}";?>"> <?php echo "{$respuesta['respuesta']}"; ?><br>
+                               <?php }
+                            }
+                         ?>
                     </form>
         <?php }
             ?>
