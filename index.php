@@ -2,6 +2,7 @@
 require_once "vendor/autoload.php";
 require_once "controller/load.php";
 require_once "model/load.php";
+require_once "estadistica/middleware.estadistica.php";
 
 $configuration = [
     'settings' => [
@@ -38,6 +39,9 @@ $app->add(new Tuupola\Middleware\HttpBasicAuthentication([
     "user" => "user"
   ]
 ]));
+
+//contador de visitas
+$app->add (middleware_estadistica);
 
 // -------------- URLs ----------------------------
 $app->get("/", \HomeController::class);
