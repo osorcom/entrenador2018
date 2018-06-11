@@ -18,6 +18,7 @@ class DataAccess
         return [];
     }
 
+
     public function crearTema($titulo, $pregunta, $r1, $r2, $r3, $r4, $optrespuesta)
     {
         try{
@@ -74,6 +75,22 @@ class DataAccess
 
 
     }
+
+    public function getPreguntas($titulo_url){
+        $sql = "SELECT preguntas.pregunta, temas.titulo, preguntas.id
+                FROM preguntas 
+                JOIN temas ON (preguntas.tema = temas.id) 
+                WHERE temas.titulo_url LIKE '%{$titulo_url}%'
+                ; ";
+        $res = $this->pdo->query($sql);
+        $article['preguntas']=$res->fetchAll();
+
+        $sqlBis = "SELECT * FROM respuestas;";
+        $resBis = $this->pdo->query($sqlBis);
+        $article['respuestas']=$resBis->fetchAll();
+        return $article;
+    }
+
 
 }
 

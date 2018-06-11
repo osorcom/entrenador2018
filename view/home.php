@@ -10,11 +10,14 @@
         <?php require_once "section/nav.php"; ?>
         <main>
             <h1>HOME</h1>
+
             <p>Bienvenido a la web de <strong>Entrenador2018</strong>. Aquí podrás responder prenguntas sobre diferentes sobre
                 diferentes temas.</p>
+
+
             <p>Actualmente disponemos de los siguientes temas:</p>
             <ul>
-              <?php foreach ($tema as $fila) { echo "<li>{$fila['titulo']}</li>"; } ?>
+              <?php foreach ($tema as $fila) { echo "<li><a href='$BASE_URL/tema/{$fila['titulo_url']}'>{$fila['titulo']}</a></li>"; } ?>
             </ul>
         </main>
 

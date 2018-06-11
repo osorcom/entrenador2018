@@ -2,10 +2,12 @@
 require_once "vendor/autoload.php";
 require_once "controller/load.php";
 require_once "model/load.php";
+require_once "estadistica/middleware.estadistica.php";
 
 $configuration = [
     'settings' => [
         'displayErrorDetails' => true,
+        'addContentLengthHeader' => false
     ],
 ];
 $c = new \Slim\Container($configuration);
@@ -39,11 +41,15 @@ $app->add(new Tuupola\Middleware\HttpBasicAuthentication([
   ]
 ]));
 
+//contador de visitas
+$app->add (middleware_estadistica);    //comento al dar fallo de ejecucion  (David Trigo)
+
 // -------------- URLs ----------------------------
 $app->get("/", \HomeController::class);
- $app->get("/nuevapregunta", \NuevaPreguntaController::class);
-$app->post("/nuevapregunta", \CrearPreguntaController::class);
 
+$app->get("/nuevapregunta", \NuevaPreguntaController::class);
+$app->post("/nuevapregunta", \CrearPreguntaController::class);
+$app->map(['GET','POST'], "/tema/{titulo}", \TemaController::class);
 // -------------- arranca la aplicación ----------------------------
 $app->run();
 ?>
