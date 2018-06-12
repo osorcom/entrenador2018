@@ -10,10 +10,15 @@ class DataAccess
         $this->pdo->setAttribute(PDO::ATTR_DEFAULT_FETCH_MODE, PDO::FETCH_ASSOC);
     }
 
+    public function getTemas(){
+      $sql = "select * from temas;";
+      $res = $this->pdo->query($sql);
+      if ($res) return $res->fetchAll();
+      return [];
+    }
 
     public function getTemasYumPreguntas(){
-        $sql = "SELECT temas.titulo, count(pregunta)
-                as numpreguntas
+        $sql = "SELECT temas.titulo, count(pregunta) as numpreguntas, temas.titulo_url
                 FROM preguntas
                 JOIN temas ON (preguntas.tema=temas.id)
                 GROUP BY temas.titulo";

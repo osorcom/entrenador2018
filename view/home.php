@@ -9,17 +9,6 @@
         <?php require_once "section/header.php"; ?>
         <?php require_once "section/nav.php"; ?>
 
-        <nav>
-        <ul>
-          <li>
-           <a href="index.php" id="index" class="btn btn-danger btn-lg btn-block">Index</a>
-         </li>
-         <li>
-           <a href="participants.php" id="participantes" class="btn btn-warning btn-lg btn-block">Participantes</a>
-        </li>
-       </ul>
-       </nav>
-
         <main>
 
             <center><h1>¡EJERCITA TU CELEBRO!!!</h1></center>
@@ -53,6 +42,8 @@
             <ul>
               <?php foreach ($tema as $fila) { echo "<li><a href='$BASE_URL/tema/{$fila['titulo_url']}'>{$fila['titulo']}</a></li>"; } ?>
             </ul>
+
+            <?php print_r($tema); ?>
 
         </main>
 

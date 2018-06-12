@@ -18,19 +18,15 @@
  una pàgina estàtica on es presentarà als desenvolupadors de
  l’aplicació i la tasca que ha fet cadascú.
 -->
-
+      <?php
+        $url = $_SERVER[SERVER_NAME].$_SERVER[REQUEST_URI];
+        $pos = strrpos($url, "/");
+        $BASE_URL = "https://".substr($url, 0, $pos);
+        echo $BASE_URL."----------------------";
+      ?>
       <?php require_once "view/section/header.php"; ?>
+      <?php require_once "view/section/nav.php"; ?>
 
-      <nav>
-        <ul>
-          <li>
-           <a href="participants.php" id="participants" class="btn btn-dark btn-lg btn-block">Participants</a>
-         </li>
-         <li>
-          <a href="index.php" id="home" class="btn btn-dark btn-lg btn-block">Index</a>
-        </li>
-       </ul>
-     </nav>
 <div id="container1">
 <main>
       <div id="Entrenador2018" class="tabcontent">

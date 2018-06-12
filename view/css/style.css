@@ -20,6 +20,11 @@ nav a:hover{
 
 }
 
+nav li{
+  display: inline-block;
+  margin-left: 1em;
+}
+
 ul{
   list-style-type: none;
 
@@ -127,4 +132,3 @@ text-align: center;}
     margin: auto;
   }
 }
-
